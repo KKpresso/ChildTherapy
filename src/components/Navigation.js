@@ -18,6 +18,8 @@ import {
   Palette as ArtIcon,
   Event as SessionIcon,
   Assignment as AssignmentIcon,
+  Chat as ChatIcon,
+  Dashboard as DashboardIcon,
 } from '@mui/icons-material';
 
 const drawerWidth = 240;
@@ -61,6 +63,18 @@ function Navigation() {
               <ListItemText primary={item.text} />
             </ListItem>
           ))}
+          <ListItem button component={RouterLink} to="/interactions">
+            <ListItemIcon>
+              <DashboardIcon />
+            </ListItemIcon>
+            <ListItemText primary="Interaction Dashboard" />
+          </ListItem>
+          <ListItem button component={RouterLink} to="/chat">
+            <ListItemIcon>
+              <ChatIcon />
+            </ListItemIcon>
+            <ListItemText primary="Virtual Patients" />
+          </ListItem>
         </List>
       </Drawer>
     </>
